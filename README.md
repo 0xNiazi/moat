@@ -2,7 +2,7 @@
 
 Keep the VPN in the moat, not on your host.
 
-`moat` runs your HTB / THM / lab OpenVPN client inside an isolated Docker
+`moat` runs your lab OpenVPN client inside an isolated Docker
 network namespace, then lets you run normal host applications (`ssh`,
 `xfreerdp`, a browser, whatever) *only inside that namespace* — nothing
 else on your machine gets routed, no VM, no full-tunnel VPN client hijacking
@@ -25,7 +25,7 @@ your real network.
 ## Setup
 
 ```bash
-git clone <this repo>
+git clone https://gitlab.com/0xNiazi/moat
 cd moat
 docker build -t moat:latest .
 ```
